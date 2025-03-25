@@ -1,0 +1,199 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: wheat;
+    background-image: url(image/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+} 
+.button{
+  display: inline-block;
+  background:#f0a500;
+  color: white;
+  padding: 10px 20px;
+  border: 5px;
+  text-decoration: none;
+  transition: background 0.9s ease;
+}
+.button:hover{
+background: #d18d00;
+transform:translate3d(-50px 2px 30px) ;
+}
+ .logo img{
+    height: 75px;
+ }
+ .logo{
+  text-align: center;
+ }
+  
+ /* h2 span a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+  } 
+   h3{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+   }
+   .new h3 span a{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+   }
+   .new h2 span a:hover{
+    transform: translateY(-5px);
+   } */
+  .fall nav ul li{
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    margin: 15px;
+    text-transform: uppercase;
+  /*  position: relative;
+    top: -60px; */
+
+  }
+  h1{
+    position: relative;
+    top: -30px;
+    color: white;
+    font-style: italic;
+    text-shadow: 3px 1px 4px;
+  }
+  nav{
+    text-align: center;
+    background-color:rgba(15, 13, 26, 0.534);
+  }
+  nav ul li a{
+    color: white;
+    /* font-size:large */
+    text-decoration: none;
+     display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+  figcaption {
+    font-size: larger;
+    transition: transform 0.3s ease-out;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 5px ;
+  }
+ 
+  .new{
+    text-align: center;
+
+  }
+  .new ul li{
+    text-align: center;
+    flex: 1;
+  }
+  .new figure{
+    margin: 0;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+  }
+
+  .new ul{
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  .new img{
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+    text-align: center;
+    transition: transform 0.3s ease-out;
+
+  }
+  .new img:hover{
+    transition: transform 0.3s ease-out;
+    transform: translatey(-10px);
+  }
+    a:hover{
+    color: aqua;
+    transform: translateY(-5px);
+  }
+  .new figcaption, .new h2:hover{
+    transform: translatex(5px);
+  }
+  footer{
+    text-align: center;
+  }
+
+
+ body{
+    animation-name: fall;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay:0s ;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:none ;
+    animation: fall 0.5s ease-out;
+ }
+ @keyframes fall{
+  from{
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to{
+      opacity:1;
+      transform: translateY(0);
+  }}
+  
+  @keyframes slopeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) rotate(-5deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.slope {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-5deg);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slope.visible {
+    animation: slopeIn 1s ease-out forwards;
+}
+@media screen and (max-width: 768px) { 
+  .new ul {
+      display: flex;
+      flex-direction: column; /* Stack items in a column */
+      align-items: center; /* Center images */
+  }
+  
+  .new li {
+      width: 100%; /* Make items take full width */
+      margin-bottom: 20px; /* Add space between rows */
+  }
+
+  .new img {
+      width: 90%; /* Adjust image size */
+      max-width: 300px; /* Set a max size */
+  }
+}
+
+ 
